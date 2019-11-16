@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>PAT Registration</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="public/css/app.css">
+        <script src="public/js/registration.js"></script>
+    
+    </head>
+    <body>
+        #parse ("common/header.vm")
+        <div class="bannerText">
+            <h1>
+                <span>Java Meetup Registration</span>
+            </h1>
+        </div>
+         <form action="#" method="post" id="register-form">
+          <div class="form-group">
+		    <label for="user">User</label>
+		    <input type="text" class="form-control" name="user" id="user" placeholder="User">
+		  </div>
+		   <div class="form-group">
+		    <label for="password">Password</label>
+		    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+		  </div>
+		   <div class="form-group">
+		    <label for="name">Email</label>
+		    <input type="text" class="form-control" name="email" id="email" placeholder="name@example.com">
+		  </div>
+		   <div class="form-group">
+		    <label for="name">Address</label>
+		    <input type="text" class="form-control" name="address" id="address" placeholder="Address">
+		  </div>
+		   <div class="form-group">
+		    <label for="name">Phone</label>
+		    <input type="text" class="form-control" name="phone" id="phone" placeholder="+966 555555555">
+		  </div>
+		  
+           <input class="submit" type="submit" id="submit" value="Submit" class="btn btn-primary">
+        </form>
+        <form id="result-form">
+        	<div class="alert alert-success" role="alert">
+				  <h4 class="alert-heading">Well done!</h4>
+				  <p>You are registered successfully</p>
+				  <hr>
+				  <p class="mb-0">Please check your email for the confirmation email, be sure to be in the venue on time.</p>
+				</div>
+        </form>
+        #parse ("common/footer.vm")
+    </body>
+</html>
